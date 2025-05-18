@@ -133,7 +133,7 @@ val discountRules: List[DiscountRule] = List(
 log("INFO", s"Loaded ${discountRules.size} discount rules")
 
 
-// this function de bastkhdmha ashan kol order andy hydkhol aleha yshouf lw howa by qualify lel condition el mwgod fl list "discountRules" ybaa okay e3mly el calculation lel discount
+//function de bastkhdmha ashan kol order andy hydkhol aleha yshouf lw howa by qualify lel condition el mwgod fl list "discountRules" ybaa okay e3mly el calculation lel discount
 def calculateTotalDiscount(o: Order): Double = {
   val applicableDiscounts = discountRules
     .filter(rule => rule.condition(o))    // filter: selects only the rules whose condition returns true for the order.
